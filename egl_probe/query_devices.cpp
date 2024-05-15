@@ -7,7 +7,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <unistd.h>
+#ifndef _WIN32
+  #include <unistd.h>
+#endif
 
 #ifdef USE_GLAD
   #include  <glad/egl.h>
